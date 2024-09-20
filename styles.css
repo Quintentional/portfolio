@@ -1,0 +1,320 @@
+html, body {
+
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 62.5px;
+        margin: 0;
+        padding: 0;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover {
+  color: rgb(101,59,100);
+}
+
+
+li {
+    list-style: none;
+    font-size: .5rem;
+    margin-left: .5rem;
+}
+
+h1, p {
+    position: relative;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+    font-size: 1.1rem;
+}
+
+p {
+    font-size: .50rem;
+}
+
+.home {
+    
+    width: 98.9vw;
+    height: 100vh;
+    background: url("images/northern-lights.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: #000;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    overflow: hidden;
+    z-index: 3;
+}
+
+.navbar {
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 1.2rem;
+    background: rgb(101,59,100);
+    background: linear-gradient(90deg, rgba(101,59,100,1) 0%, rgba(40,40,74,1) 15%, rgba(47,96,94,1) 100%);
+}
+
+.logo {
+    font-family: fondamento, sans-serif;
+    background: -webkit-linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(104, 104, 104) 75%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+    margin-top: .10rem;
+    font-size: .8rem;
+    transition: .6s;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.nav-links {
+    margin-top: .3rem;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bg-gradient {
+    background: linear-gradient(90deg, rgba(101,59,100,1) 0%, rgba(40,40,74,1) 47%, rgba(47,96,94,1) 100%);
+    z-index: 1;
+    width: 100vw;
+    margin: 0;
+}
+
+.bg-white {
+    background: #fff;
+    width: 98.9vw;
+
+}
+
+
+.intro-flex {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.intro {
+    position: relative;
+    text-align: center;
+    height: 30%;
+    width: 30%;
+    background: rgb(101,59,100);
+    background: linear-gradient(90deg, rgba(101,59,100,.5) 0%, rgba(40,40,74,.5) 47%, rgba(47,96,94,.5) 100%);
+    border-radius: 20px;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform .8s ease-out, box-shadow .5s;
+    transform-style: preserve-3d;
+    animation: .6s ease-in slideInFromTop;
+}
+
+@keyframes slideInFromTop {
+    0% {
+      transform: translateY(-100%);
+    }
+    85% {
+      transform: translateY(15%);
+    }
+    100% {
+        transform: translateY(0);
+      }
+  }
+
+  .intro:hover {
+    transform: rotateY(180deg);
+    box-shadow: -10px 5px 5px rgba(0, 0, 0, 0.3);
+
+  }
+  
+  .intro-front, .intro-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  
+  .intro-back {
+    transform: rotateY(180deg);
+    top: 1rem;
+    line-height: 1.8;
+  }
+
+  .contact-link {
+    position: absolute;
+    top: 4rem;
+  }
+
+  /* Skills Section */
+
+  #skills {
+    text-align: center;
+    z-index: 2;
+    background-color: #fff;
+  }
+
+  .skills-heading {
+    background: -webkit-linear-gradient(90deg, rgb(119, 64, 118) 0%, rgb(49, 49, 97) 40%, rgb(58, 136, 133) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 0;
+  }
+
+  .skills-icons {
+    display: flex;
+    flex: row wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  i {
+    color: #3b3f44ef;
+    font-size: 3rem;
+    padding: 1rem 0 2rem;
+    transition: .3s ease-out;
+  }
+
+
+  i:hover {
+    transform: scale(1.2) translate(0,-25px);
+  }
+
+  .fa-html5:hover {
+    color: #f06529;
+  }
+
+  .fa-css3-alt:hover {
+    color: #264de4;
+  }
+
+  .fa-js-square:hover {
+     color: #F0DB4F;
+  }
+
+  .fa-bootstrap:hover {
+    color: #563d7c;
+  }
+
+  .fa-sass:hover {
+    color: #cc6699;
+  }
+
+  .fa-react:hover {
+    color: #61DBFB;
+  }
+
+  /* Projects Section*/
+
+  #projects {
+    width: 100vw;
+    height: 60vh;
+    padding-top: 1rem;
+    text-align: center;
+    background: linear-gradient(90deg, rgba(101,59,100,1) 0%, rgba(40,40,74,1) 47%, rgba(47,96,94,1) 100%);
+    z-index: 2;
+    clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+  }
+
+
+  /*Contact Section*/
+
+  #contact {
+    width: 100vw;
+    height: 70vh;
+    padding-top: .1rem;
+    text-align: center;
+    z-index: 2;
+  }
+
+  .contact-heading {
+    background: -webkit-linear-gradient(90deg, rgb(119, 64, 118) 0%, rgb(49, 49, 97) 40%, rgb(58, 136, 133) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 0;
+  }
+  .contact-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-container {
+    width: 15rem;
+    height: 12rem;
+    background: -webkit-linear-gradient(90deg, rgb(119, 64, 118) 0%, rgb(49, 49, 97) 40%, rgb(58, 136, 133) 100%);
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  label {
+    color: #fff;
+    font-size: .7rem;
+  }
+
+  input[type=text] {
+    border-radius: 5px;
+  }
+
+  textarea {
+    border-radius: 5px;
+  }
+
+  #submit {
+    padding: .1rem .3rem;
+    border-radius: 10px;
+    color: #fff;
+    background: -webkit-linear-gradient(90deg, rgb(119, 64, 118) 0%, rgb(49, 49, 97) 40%, rgb(58, 136, 133) 100%);
+    font-size: .5rem;
+    border: 1px solid #fff;
+    z-index: 2;
+    transition: .4s;
+ }
+
+ #submit:hover {
+    cursor: pointer;
+    transform: scale(1.1) translateY(-10%);
+ }
+
+ #submit:active {
+  transform: scale(.9);
+}
+
+.footer {
+  width: 100vw;
+  height: 10vh;
+  margin-top: 1rem;
+  background: linear-gradient(90deg, rgba(101,59,100,1) 0%, rgba(40,40,74,1) 47%, rgba(47,96,94,1) 100%);
+  text-align: center;
+}
+
+.copyright {
+  font-size: .3rem;
+  padding-top: 1.3rem;
+}
